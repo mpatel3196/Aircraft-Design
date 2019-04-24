@@ -11,7 +11,7 @@
 from math import exp, sqrt
 from standard_atmosphere import standard_atmosphere
 
-# @@@ Write now everyting is hard coded, will updated for inputs in future
+# @@@ right now everyting is hard coded, will updated for inputs in future
 
 ## Given Data
 # Type of Aircraft: Jet Transport
