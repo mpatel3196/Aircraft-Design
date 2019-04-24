@@ -1,3 +1,5 @@
+from math import exp
+
 def standard_atmosphere(alt):
     '''
     Calculate the values of Density(Rho) and Temperature(T) for given altitude.
@@ -5,7 +7,7 @@ def standard_atmosphere(alt):
 
     Parameters
     ------------
-    alt: altitude, m
+    alt: altitude, ft
 
     Returns
     ---------
@@ -17,6 +19,9 @@ def standard_atmosphere(alt):
     Rhos= 1.2250  # in kg/m^3
     Ts= 288.16 # in K
     alt_s= 0 # in m
+
+    # conversion
+    alt = alt * 0.304799 # in metre
 
     g0 = 9.8 # m/s^2 graviational constant
     R= 287 # gas constant, # 1716.3 in english unit
@@ -33,9 +38,3 @@ def standard_atmosphere(alt):
 
     return Rho, T
 
-if __name__=='__main__':
-    # getting values from standard atmosphere
-    Rho, T = standard_atmosphere(5000)   # 5km
-    print(f'Rho = {Rho}')
-    print(f'T = {T}')
-    
