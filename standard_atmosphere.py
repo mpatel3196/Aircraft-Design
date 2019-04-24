@@ -1,3 +1,5 @@
+from math import exp
+
 def standard_atmosphere(alt):
     '''
     Calculate the values of Density(Rho) and Temperature(T) for given altitude.
