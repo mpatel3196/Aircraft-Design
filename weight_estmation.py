@@ -26,7 +26,7 @@ M_cruise = 0.78   # service ceiling, cruise Mach
 M_max = 0.82    # speed ceiling, max Mach
 
 cruise_altitude = 42000 # ft
-runway_dist = 9000 # ft, take_off_distance == landing_distance
+runway_length = 9000 # ft, take_off_distance == landing_distance
 
 # getting values of temperature and density at cruise_altitude
 rho, temp = standard_atmosphere(cruise_altitude)
@@ -38,9 +38,9 @@ L_by_D_max = 18  # max L/D ratio
 L_by_D_cruise = L_by_D_max * 0.866  # L_by_D_cruise at cruise it is not max
 
 R1 = 2500 # NM, nautical miles, # cruise range based on the mission profile
-R1 = R1 * 6074.56    # ft,   6074.56 = conersion factor
+R1 = R1 * 6074.56    # ft,   6074.56 = conversion factor
 R2 = 800 # NM, nautical miles,  # return cruise range based on the mission profile
-R2 = R2 * 6074.56    # ft,   6074.56 = conersion factor
+R2 = R2 * 6074.56    # ft,   6074.56 = conversion factor
 E = 15 * 60  # Loiter Endurance , 15 min , converted to seconds
 
 ## Take-off weight builtup
