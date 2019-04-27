@@ -289,13 +289,13 @@ def get_takeoff_gross_weight(W_payload, mission_profile, aircraft_type, engine_t
     W0_guess = 5000    # random guess
     We_W0 = empty_weight_fraction(W0_guess, aircraft_type=aircraft_type, variable_sweep=variable_sweep)
     Wf_W0 = fuel_weight_fraction(mission_profile, engine_type)
-    W0 = (W_payload) / (1 - We_W0 - Wf_W0)
+    W0 = (W_payload) / abs(1 - We_W0 - Wf_W0)
     # while W0_guess != W0 :
     while abs(W0_guess - W0) > 0.000001:
         W0_guess = W0
         # We_W0 = A*(W0_guess**C)
         We_W0 = empty_weight_fraction(W0_guess, aircraft_type=aircraft_type, variable_sweep=variable_sweep)
-        W0 = (W_payload)/(1 - We_W0 - Wf_W0)
+        W0 = (W_payload)/ abs(1 - We_W0 - Wf_W0)
 
     return W0
 
@@ -349,5 +349,6 @@ def get_SFC(engine, V):
 #  W0 weight negative
 #  We_W0 and Wf_W0  summation must be less than 1 (actually less than 0.9 or something if we consider w_payload)
 # one solution to make weight positive is to add   "abs" to denominator in W0 = W_payload / abs(***)
+# this solution is used but better one is required
 ##
 
