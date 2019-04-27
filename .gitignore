@@ -1,0 +1,7 @@
+.__pycache__/
+..ipynb_checkpoints
+weight_estimation/.ipynb_checkpoints/
+weight_estimation/src/__pycache__/
+weight_estimation/dump/__pycache__/
+
+**/*~
