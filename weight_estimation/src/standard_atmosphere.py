@@ -1,3 +1,5 @@
+import sys
+sys.path.append('..')
 from math import exp
 
 def standard_atmosphere(alt):
